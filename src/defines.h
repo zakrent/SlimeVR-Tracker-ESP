@@ -58,14 +58,14 @@ IMU_DESC_ENTRY(IMU_BMP160, PRIMARY_IMU_ADDRESS_ONE, IMU_ROTATION, PIN_IMU_SCL, P
 //   BAT_INTERNAL for internal - can detect only low battery,
 //   BAT_MCP3021 for external ADC connected over I2C
 //   BAT_BQ27441 for external BQ27441 battery gauge IC
-#define BATTERY_MONITOR BAT_EXTERNAL
+#define BATTERY_MONITOR BAT_BQ27441
 #define batterySampleRate 10000
 #define BATTERY_LOW_VOLTAGE_DEEP_SLEEP false
 #define BATTERY_LOW_POWER_VOLTAGE 3.3f // Voltage to raise error
 // Only needed for BQ27441:
-#define BATTERY_DESIGN_CAPACITY 1500 // Battery design capacity in mAh
+#define BATTERY_DESIGN_CAPACITY 470 // Battery design capacity in mAh
 #define BATTERY_LOWEST_OP_VOLTAGE 3.0f // Lowest battery voltage in which board can still operate
-#define BATTERY_TAPER_CURRENT 75 // Current at which charger stops charging in mA
+#define BATTERY_TAPER_CURRENT 34 // Current at which charger stops charging in mA
 
 #if BATTERY_MONITOR == BAT_BQ27441 && I2C_SPEED > 100000
 #error BQ27441 library supports only 100 kHz I2C speed
