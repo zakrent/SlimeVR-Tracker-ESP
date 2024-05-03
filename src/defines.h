@@ -27,10 +27,10 @@
 
 // Set parameters of IMU and board used
 #define IMU IMU_BMI270
-#define SECOND_IMU IMU
+#define SECOND_IMU IMU_BMI270
 #define BOARD BOARD_CUSTOM
-#define IMU_ROTATION DEG_270
-#define SECOND_IMU_ROTATION DEG_270
+#define IMU_ROTATION DEG_0
+#define SECOND_IMU_ROTATION DEG_0
 
 #define PRIMARY_IMU_OPTIONAL false
 #define SECONDARY_IMU_OPTIONAL true
@@ -67,9 +67,9 @@ IMU_DESC_ENTRY(IMU_BMP160, PRIMARY_IMU_ADDRESS_ONE, IMU_ROTATION, PIN_IMU_SCL, P
 #define BATTERY_LOWEST_OP_VOLTAGE 3.0f // Lowest battery voltage in which board can still operate
 #define BATTERY_TAPER_CURRENT 34 // Current at which charger stops charging in mA
 
-#if BATTERY_MONITOR == BAT_BQ27441 && I2C_SPEED > 100000
-#error BQ27441 library supports only 100 kHz I2C speed
-#endif
+//#if BATTERY_MONITOR == BAT_BQ27441 && I2C_SPEED > 100000
+//#error BQ27441 library supports only 100 kHz I2C speed
+//#endif
 
 // BAT_EXTERNAL definition override
 // D1 Mini boards with ESP8266 have internal resistors. For these boards you only have to adjust BATTERY_SHIELD_RESISTANCE.
