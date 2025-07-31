@@ -33,13 +33,13 @@
 #define SECOND_IMU IMU_AUTO
 #endif
 #ifndef BOARD
-#define BOARD BOARD_SLIMEVR_V1_2
+#define BOARD BOARD_SOL_TRACK
 #endif
 #ifndef IMU_ROTATION
-#define IMU_ROTATION DEG_270
+#define IMU_ROTATION DEG_0
 #endif
 #ifndef SECOND_IMU_ROTATION
-#define SECOND_IMU_ROTATION DEG_270
+#define SECOND_IMU_ROTATION DEG_0
 #endif
 
 #ifndef PRIMARY_IMU_OPTIONAL
@@ -60,7 +60,7 @@
 //   BAT_INTERNAL for internal - can detect only low battery,
 //   BAT_MCP3021 for external ADC connected over I2C
 //   BAT_BQ27441 for external BQ27441 battery gauge IC
-#define BATTERY_MONITOR BAT_EXTERNAL
+#define BATTERY_MONITOR BAT_BQ27441
 #endif
 
 // --- OVERRIDES FOR DEFAULT PINS

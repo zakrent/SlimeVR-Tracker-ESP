@@ -185,6 +185,16 @@ BATTERY_R1(10)
 BATTERY_R2(40.2)
 LED(LED_BUILTIN)
 
+#elif BOARD == BOARD_SOL_TRACK
+
+SDA(4)
+SCL(5)
+INT(13)
+INT2(255)
+LED(2)
+INVERTED_LED(true)
+BATTERY(255)
+
 #endif
 
 // Default IMU pinouts and definitions for default tracker types
